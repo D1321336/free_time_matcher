@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Free Time Matcher</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+  <!-- 登入畫面 -->
+  <div id="loginPage">
+
+    <div class="login-card">
+
+      <h1>Free Time Matcher</h1>
+
+      <h2>登入</h2>
+
+      <input type="text"
+            id="loginStudentId"
+            placeholder="學號">
+
+      <br><br>
+
+      <input type="password"
+            id="loginPassword"
+            placeholder="密碼">
+
+      <br><br>
+
+      <button id="loginBtn">
+        登入
+      </button>
+
+      <p>
+        沒有帳號？
+
+        <button id="showRegisterBtn">
+          註冊
+        </button>
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- 註冊畫面 -->
+  <div id="registerPage" style="display:none">
+
+    <h2>註冊</h2>
+
+    <input type="text" id="registerName" placeholder="姓名">
+
+    <input type="text" id="registerStudentId" placeholder="學號">
+
+    <input type="password" id="registerPassword" placeholder="密碼">
+
+    <button id="registerBtn">註冊</button>
+
+    <button id="backLoginBtn">返回登入</button>
+
+  </div>
+
+
+  <!-- 主畫面 -->
+  <div id="mainPage" style="display:none">
+
+    <h2>歡迎使用 Free Time Matcher</h2>
+
+    <h3 id="welcomeText"></h3>
+
+    <button id="logoutBtn">登出</button>
+
+    <h3>匯入課表 PDF</h3>
+
+    <input
+        type="file"
+        id="pdfInput"
+        accept=".pdf">
+
+    <button id="parsePdfBtn">
+        解析 PDF
+    </button>
+
+    <h3>PDF解析結果</h3>
+
+    <div id="pdfPreviewArea">
+
+    </div>
+
+    <button
+    id="confirmImportBtn"
+    style="display:none">
+    確認匯入
+    </button>
+
+    <button id="cancelImportBtn" style="display:none">
+      取消匯入
+    </button>
+
+<div id="pdfPreviewArea"></div>
+
+    <div class="container">
+
+        <div class="left-panel">
+          
+            <h3>我的課表</h3>
+
+            <div id="scheduleArea"></div>
+
+        </div>
+
+        <div class="right-panel">
+
+            <h3>我的群組</h3>
+
+            <input id="groupNameInput"
+                  placeholder="群組名稱">
+
+            <button id="createGroupBtn">
+                建立群組
+            </button>
+            
+
+            <div id="groupArea"></div>
+
+            <div id="groupDetailArea"></div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>
